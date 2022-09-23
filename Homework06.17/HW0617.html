@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <style>
+
+        #title {
+            box-shadow: 0px 0px 15px grey;
+            background-color: #f3c078;
+            text-align: center;
+            padding: 15px;
+            border: 5px;
+            width: 1000px;
+            margin:auto;
+        }
+
+        #container {
+            width: 100%;
+            margin: auto;
+            margin-top:10px;
+            display:flex;
+            flex-wrap: wrap;
+            text-align:center;
+            justify-content:center; 
+        }
+
+            #container > div {
+                box-shadow: 0px 0px 10px black;
+                border-radius: 10px;
+                margin-top: 15px;
+                margin:10px;
+                padding: 15px;
+            }
+
+                #container > div > img {
+                    width: inherit;
+                }
+
+        .center {
+            text-align: center;                 
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 id="title">全國農業旅遊休閒園區</h1>
+
+    <div id="container"></div>
+    
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script>
+        var item = "";
+        $.ajax({
+            type: 'get',
+            url: 'https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvAttractions.aspx?&UnitId=192',
+            success: function (data) {
+
+                for (var i = 0; i < data.length; i++) {
+
+                    item = `<div title="${data[i].Introduction}">
+                                        <h2 class="center"> ${data[i].Name} </h2>
+                                        <div class="center"><img src="${data[i].Photo}" /></div>
+                                        <h3 class="center"> ${data[i].City} ${data[i].Town} </h3>
+                                        <div class="center">
+                                            <span>電話:${data[i].Tel} </span> |
+                                            <span>地址:${data[i].Address} </span> |
+                                            <a href="https://www.google.com.tw/maps/search/${data[i].Address}" target="_blank">查看地圖</a>
+                                        </div>
+                                    </div>`;
+
+                    $('#container').append(item);
+
+                }
+
+            },
+
+            error: function () {
+                alert('error');
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
