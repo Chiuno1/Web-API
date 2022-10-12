@@ -3,7 +3,7 @@
 ## 首頁
 ![image](https://user-images.githubusercontent.com/113997297/195178020-6038b729-319c-47d9-9a75-7ba28a4e1bac.png)
 
-## 搜尋功能(圖例為搜尋"高雄")
+## 搜尋功能(圖例為搜尋"高雄"之結果)
 ![image](https://user-images.githubusercontent.com/113997297/195178183-eebda083-f8a1-43d9-b6da-f97a992b7986.png)
 
 ## 查看Google地圖功能
