@@ -1,4 +1,4 @@
-# Web-API
+# jQuery-Ajax與JSON資料讀取應用
 
 ## 首頁
 ![image](https://user-images.githubusercontent.com/113997297/195178020-6038b729-319c-47d9-9a75-7ba28a4e1bac.png)
