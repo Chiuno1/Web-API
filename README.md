@@ -1,5 +1,7 @@
 # 全國農業旅遊休閒園區
 
+### 以jQuery-Ajax取得JSON資料，可搜尋園區所在之縣市及地圖，並以Bootstrap簡易排版做出響應式網站效果。
+
 ## 首頁
 ![image](https://user-images.githubusercontent.com/113997297/195178020-6038b729-319c-47d9-9a75-7ba28a4e1bac.png)
 
